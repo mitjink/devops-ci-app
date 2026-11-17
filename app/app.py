@@ -5,12 +5,10 @@ from flask import Flask, jsonify # type: ignore
 def create_app():
     """Создаёт и настраивает экземпляр приложения."""
     application = Flask(__name__)
- 
     @application.get("/health")
     def health():
         """Возвращает результат простой проверки жизнеспособности."""
         return jsonify(status="ok")
- 
     @application.get("/")
     def index():
         """Возвращает сведения о службе."""
@@ -21,5 +19,4 @@ def create_app():
         )
  
     return application
-
 app = create_app()

@@ -17,6 +17,5 @@ def create_app():
             version="1.0.0",
             status="running",
         )
- 
     return application
 app = create_app()

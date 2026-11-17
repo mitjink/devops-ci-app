@@ -1,6 +1,6 @@
 """HTTP-приложение для проверки CI-конвейера."""
 
-from flask import Flask, jsonify
+from flask import Flask, jsonify # type: ignore
 
 def create_app():
     """Создаёт и настраивает экземпляр приложения."""
